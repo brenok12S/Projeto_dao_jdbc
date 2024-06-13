@@ -14,20 +14,12 @@ public class Program {
 		
 		SellerDao sellerDao = DaoFactory.createSellerDao();
 		
-		Seller seller = sellerDao.findById(1);
-		
+		System.out.println(" == TEST 1 : Seller findById == ");
+		Seller seller = sellerDao.findById(3);
 		System.out.println(seller);
 		
 
-/*		if (seller != null) {
-            System.out.println(seller);
-        } else {
-            System.out.println("Seller not found.");
-        }
-*/		
 	
-		
-
 	}
 
 }
