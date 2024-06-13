@@ -1,25 +1,33 @@
 package application;
 
-import java.util.Date;
-
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
-import model.entities.Department;
 import model.entities.Seller;
 
 public class Program {
 
 	public static void main(String[] args) {
 		
-		Department obj = new Department(1, "Books");
-		System.out.println(obj);
 		
-		Seller sl = new Seller(21, "Bob", "bob@gmail.com", new Date(), 3000.00, obj);
 
-		SellerDao sellerdao = DaoFactory.createSallerDao();
+//		System.out.println("Attempting to find seller with ID: 3");
 		
-		System.out.println(sellerdao);
+		SellerDao sellerDao = DaoFactory.createSellerDao();
 		
+		Seller seller = sellerDao.findById(1);
+		
+		System.out.println(seller);
+		
+
+/*		if (seller != null) {
+            System.out.println(seller);
+        } else {
+            System.out.println("Seller not found.");
+        }
+*/		
+	
+		
+
 	}
 
 }

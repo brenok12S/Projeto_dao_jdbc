@@ -20,6 +20,7 @@ public class DB {
 			Properties props = loadProperties();
 			String url = props.getProperty("dburl");
 			conn = DriverManager.getConnection(url, props);
+			
 
 		}
 			catch (SQLException e ) {
@@ -65,7 +66,7 @@ public class DB {
 	}
 	
 	public static void closeResultSet(ResultSet rs) {
-		while (rs != null) {
+		if (rs != null) {
 			try {
 				rs.close();
 			}
