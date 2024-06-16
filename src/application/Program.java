@@ -42,10 +42,21 @@ public class Program {
 		}
 		System.out.println("=================================================================================================================================================================");
 
-		System.out.println("\n ==== TEST 3 : Seller findById ==== ");
+		System.out.println("\n ==== TEST 4 : Seller findById ==== ");
 		Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 400.0, department);
 		sellerDao.insert(newSeller);
 		System.out.println("Insert! New id = " + newSeller.getId());
+		System.out.println("=================================================================================================================================================================");
+
+		
+		System.out.println("\n ==== TEST 5 : Seller update ==== ");
+		seller = sellerDao.findById(1);
+		seller.setEmail("bobbrown@gmail.com");
+		sellerDao.update(seller);
+		System.out.println("Update Completed");
+		System.out.println("=================================================================================================================================================================");
+
+		
 	}
 
 }
