@@ -112,9 +112,9 @@ public class SellerDaoJDBC implements SellerDao{
 			
 			st.setInt(1, id);
 			
-			int rows = st.executeUpdate();
+			int rowsAffected = st.executeUpdate();
 			
-			if (rows == 0) {
+			if (rowsAffected == 0) {
 				throw new DbException("Unexpected error! ID not found! Please provide a valid ID.");
 			}
 			

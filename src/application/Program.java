@@ -36,14 +36,14 @@ public class Program {
 		System.out.println("=================================================================================================================================================================");
 
 		
-		System.out.println("\n ==== TEST 3 : Seller findById ==== ");
+		System.out.println("\n ==== TEST 3 : Seller findAll ==== ");
 		list = sellerDao.findAll();
 		for (Seller obj : list) {
 			System.out.println(obj);
 		}
 		System.out.println("=================================================================================================================================================================");
 
-		System.out.println("\n ==== TEST 4 : Seller findById ==== ");
+		System.out.println("\n ==== TEST 4 : Seller insert ==== ");
 		Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 400.0, department);
 		sellerDao.insert(newSeller);
 		System.out.println("Insert! New id = " + newSeller.getId());
@@ -57,7 +57,7 @@ public class Program {
 		System.out.println("Update Completed");
 		System.out.println("=================================================================================================================================================================");
 
-		System.out.println("\n ==== TEST 6 : Seller update ==== ");
+		System.out.println("\n ==== TEST 6 : Seller delete ==== ");
 		System.out.println("Enter id for deled test: ");
 		int id = sc.nextInt();
 		sellerDao.deleteById(id);

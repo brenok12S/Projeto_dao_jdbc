@@ -16,7 +16,7 @@ public class DaoFactory {
 	}
 	
 	public static DepartmentDao createDepartmentDao() {
-		System.out.println("Connection established successfully.");
+		System.out.println(" === Connection established successfully. === ");
 		return new DepartmentDaoJDBC(DB.getConnection());
 		
 	}
